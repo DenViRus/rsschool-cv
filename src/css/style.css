@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+:root {
+  --heading-style: "Nerko One", cursive;
+  --paragraph-style: "Lobster", cursive;
+}
+
+.project-container {
+  width: 95%;
+  height: 95%;
+  margin: auto;
+  background-color: lightgrey;
+}
+
+.heading {
+  font-family: var(--heading-style);
+}
+
+.paragraph {
+  font-family: var(--paragraph-style);
+}
+
+/* header start */
+.header-box {
+  display: flex;
+}
+
+.header-img-box {
+  width: 200px;
+  margin: 10px;
+}
+.header-image {
+  width: 100%;
+}
+
+.header-content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+.header-heading {
+  font-size: 40px;
+  line-height: 45px;
+}
+
+.header-paragraph {
+  font-size: 25px;
+  line-height: 30px;
+}
+/* header finish */
+
+/* main start */
+.main-section {
+  margin: 15px;
+}
+
+.section-heading {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.section-paragraph {
+  font-size: 25px;
+  line-height: 30px;
+  text-indent: 50px;
+}
+
+.section-content-box {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.inner-section-list {
+  margin-left: 100px;
+}
+
+.item-img {
+  width: 25px;
+}
+
+.item-heading {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.item-paragraph {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.item-paragraph:hover {
+  font-size: 22px;
+  color: rgb(0, 0, 255);
+}
+
+.item-pre {
+  display: flex;
+  justify-content: center;
+  margin: 0 100px;
+  font-family: monospace;
+  white-space: pre;
+  font-size: 15px;
+  font-weight: bold;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+.section-img-box {
+  margin: 0 20px;
+}
+
+.section-img {
+  width: 30px;
+  vertical-align: middle;
+  margin: 5px;
+  transition: scale 1s;
+}
+
+.section-img:hover {
+  scale: 1.5;
+  animation: sectionImgAnimation 3s linear infinite;
+}
+
+@keyframes sectionImgAnimation {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.skills-item-img {
+  width: 15px;
+  vertical-align: baseline;
+}
+
+.code-item-img {
+  width: 15px;
+  vertical-align: baseline;
+}
+
+.experience-paragraph {
+  margin-bottom: 10px;
+}
+
+.experience-item-img {
+  width: 15px;
+  vertical-align: baseline;
+}
+
+.code-item-heading {
+  color: rgb(0, 0, 255);
+}
+
+.inner-item-link {
+  font-size: 20px;
+}
+
+.inner-item-link:hover {
+  font-size: 22px;
+  color: rgb(0, 0, 255);
+}
+/* main finish */
+
+/* footer start */
+.footer {
+}
+
+.footer-box {
+}
+/* footer finish */
