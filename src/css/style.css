@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+:root {
+  --heading-style: "Nerko One", cursive;
+  --paragraph-style: "Lobster", cursive;
+}
+
+.project-container {
+  background-color: black;
+  position: relative;
+}
+
+.project-video {
+  width: 100%;
+  z-index: -1;
+}
+
+.project-field {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+}
+
+.heading {
+  font-family: var(--heading-style);
+}
+
+.paragraph {
+  font-family: var(--paragraph-style);
+}
+
+/* header start */
+.header-box {
+  display: flex;
+}
+
+.header-img-box {
+  width: 300px;
+  margin: 20px 10px 10px;
+}
+.header-image {
+  width: 100%;
+}
+
+.header-content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+.header-heading {
+  font-size: 50px;
+  line-height: 55px;
+}
+
+.header-paragraph {
+  font-size: 30px;
+  line-height: 35px;
+}
+/* header finish */
+
+/* main start */
+.main-section {
+  margin: 15px;
+}
+
+.section-heading {
+  font-size: 40px;
+  line-height: 45px;
+}
+
+.section-paragraph {
+  font-size: 30px;
+  line-height: px;
+  text-indent: 50px;
+}
+
+.section-content-box {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.inner-section-list {
+  margin-left: 100px;
+}
+
+.section-item {
+  margin-top: 5px;
+}
+
+.item-img {
+  width: 35px;
+}
+
+.item-heading {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.item-paragraph {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 25px;
+  line-height: 30px;
+  color: silver;
+}
+
+.item-paragraph:hover {
+  font-size: 22px;
+  color: rgb(255, 215, 0);
+}
+
+.item-pre {
+  font-family: monospace;
+  white-space: pre;
+  font-size: 16px;
+}
+
+.section-img-box {
+  margin: 0 20px;
+}
+
+.section-img {
+  width: 35px;
+  vertical-align: middle;
+  margin: 10px;
+  transition: scale 0.5s;
+}
+
+.section-img:hover {
+  scale: 1.5;
+  animation: sectionImgAnimation 2s linear infinite;
+}
+
+@keyframes sectionImgAnimation {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.skills-item-img {
+  width: 15px;
+  vertical-align: baseline;
+}
+
+.code-item-img {
+  width: 15px;
+  vertical-align: baseline;
+}
+
+.experience-paragraph {
+  margin-bottom: 10px;
+}
+
+.experience-item-img {
+  width: 15px;
+  vertical-align: baseline;
+}
+
+.code-item-heading {
+  color: rgb(255, 255, 255);
+}
+
+.inner-item-link {
+  font-size: 20px;
+}
+
+.inner-item-link:hover {
+  font-size: 22px;
+  color: gold;
+}
+/* main finish */
+
+/* footer start */
+
+.footer-box {
+  margin-top: 20px;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+}
+
+.footer-img {
+  width: 50px;
+}
+
+.footer-heading {
+  margin-left: 10px;
+  color: rgb(192, 192, 192);
+}
+
+.footer-heading:hover {
+  color:  rgb(255, 255, 255);
+  box-shadow: 0 0 10px  rgb(255, 255, 255);;
+}
+
+.footer-logo {
+  width: 200px;
+}
+
+.footer-logo:hover {
+  scale: 1.05;
+}
+/* footer finish */
