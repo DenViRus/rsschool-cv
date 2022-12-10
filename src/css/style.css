@@ -1,31 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 :root {
   --heading-style: "Nerko One", cursive;
   --paragraph-style: "Lobster", cursive;
+  --link-style: 'Roboto', sans-serif;
+
+  --heading-size: 1.5rem;
+  --paragraph-size: 1.2rem;
+
+  --item-heading-size: 1.3rem;
+  --item-paragraph-size: 1.1rem;
+  --link-size: 1.1rem;
+  --link-hover-size: 1.3rem;
+
+
+  --text-color: rgb(255, 255, 255);
+  --item-paragraph-color: rgb(192, 192, 192);
+  --link-color: rgb(0, 0, 255);
+  --hover-color: rgb(255, 215, 0);
+}
+
+html {
+  font-size: 20px;
 }
 
 .project-container {
   background-color: black;
-  position: relative;
+
+  background-position: center center;
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  background-image: url(./../img/background1.jpg);
+  color: var(--text-color);
+  width: 100%;
+  height: 100%;
+
+  animation: mainBackground 5s linear infinite;
+  transition: background-image 5s linear;
 }
 
-.project-video {
-  width: 100%;
-  z-index: -1;
+@keyframes mainBackground {
+  to {background-image: url(./../img/background1.jpg);}
+  to {background-image: url(./../img/background2.jpg);}
+  to {background-image: url(./../img/background3.jpg);}
+  to {background-image: url(./../img/background4.jpg);}
+  to {background-image: url(./../img/background5.jpg);}
 }
 
 .project-field {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 5%;
   width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  z-index: 1;
-  color: rgb(255, 255, 255);
+  height: 90%;
+  margin: auto;
 }
 
 .heading {
@@ -36,105 +63,116 @@
   font-family: var(--paragraph-style);
 }
 
+.link {
+  font-family: var(--link-style);
+}
+
 /* header start */
 .header-box {
   display: flex;
+  padding-top: 1rem;
+  align-items: center;
 }
 
 .header-img-box {
-  width: 300px;
-  margin: 20px 10px 10px;
+  width: 200px;
 }
+
+.header-content-box {
+  margin-left: 1rem;
+}
+
 .header-image {
   width: 100%;
 }
 
-.header-content-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px;
-}
-
 .header-heading {
-  font-size: 50px;
-  line-height: 55px;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .header-paragraph {
-  font-size: 30px;
-  line-height: 35px;
+  color: var(--item-paragraph-color)
 }
 /* header finish */
 
 /* main start */
 .main-section {
-  margin: 15px;
+  margin-top: 1rem;
 }
 
 .section-heading {
-  font-size: 40px;
-  line-height: 45px;
+  font-size: var(--heading-size);
+  line-height: var(--heading-size);
 }
 
 .section-paragraph {
-  font-size: 30px;
-  line-height: px;
-  text-indent: 50px;
+  font-size: var(--paragraph-size);
+  line-height: var(--heading-size);
+  text-indent: 3rem;
 }
 
 .section-content-box {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.inner-section-list {
-  margin-left: 100px;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
 }
 
 .section-item {
-  margin-top: 5px;
+margin-top: 0.5rem;
 }
 
 .item-img {
-  width: 35px;
+  width: var(--item-heading-size);
 }
 
 .item-heading {
-  display: inline-block;
-  margin-left: 5px;
-  font-size: 30px;
-  line-height: 35px;
+  margin-left: 0.5rem;
+  font-size: var(--item-heading-size);
+  line-height: var(--item-heading-size);
 }
 
 .item-paragraph {
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 25px;
-  line-height: 30px;
-  color: silver;
+  margin-left: 0.5rem;
+  font-size: var(--item-paragraph-size);
+  line-height: var(--item-heading-size);
+  color: var(--item-paragraph-color);
+  transition: all .3s linear;
 }
 
 .item-paragraph:hover {
-  font-size: 22px;
-  color: rgb(255, 215, 0);
+  color: var(--hover-color);
 }
 
-.item-pre {
-  font-family: monospace;
-  white-space: pre;
-  font-size: 16px;
+.item-link {
+  margin-left: 0.5rem;
+  color: var(--link-color);
+  font-size: var(--item-paragraph-size);
+  font-weight: 600;
+  line-height: var(--item-heading-size);
+  transition: all .3s linear;
+}
+
+.item-link:hover {
+  color: var(--hover-color);
+  font-weight: 600;
+  box-shadow: 0px 0px 5px 5px var(--hover-color);
+}
+
+.item-sign {
+  width: 0.7rem;
+  height: 0.7rem;
+  vertical-align: baseline;
 }
 
 .section-img-box {
-  margin: 0 20px;
+  margin-top: 1rem;
 }
 
 .section-img {
-  width: 35px;
+  width: 2rem;
   vertical-align: middle;
-  margin: 10px;
-  transition: scale 0.5s;
+  margin-left: 1rem;
+  transition: all 0.3s;
 }
 
 .section-img:hover {
@@ -148,43 +186,23 @@
   }
 }
 
-.skills-item-img {
-  width: 15px;
-  vertical-align: baseline;
-}
-
-.code-item-img {
-  width: 15px;
-  vertical-align: baseline;
+.item-pre {
+  font-size: 0.8rem;
 }
 
 .experience-paragraph {
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
-
-.experience-item-img {
-  width: 15px;
-  vertical-align: baseline;
-}
-
-.code-item-heading {
-  color: rgb(255, 255, 255);
-}
-
-.inner-item-link {
-  font-size: 20px;
-}
-
-.inner-item-link:hover {
-  font-size: 22px;
-  color: gold;
+.inner-section-list {
+  margin-left: 5rem;
 }
 /* main finish */
 
 /* footer start */
 
 .footer-box {
-  margin-top: 20px;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .footer-list {
@@ -197,25 +215,28 @@
   align-items: center;
 }
 
+.footer-link {
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  padding: .2rem .3rem;
+}
+
 .footer-img {
-  width: 50px;
+  width: 3rem;
+  height: 3rem;
+  vertical-align: middle;
 }
 
-.footer-heading {
-  margin-left: 10px;
-  color: rgb(192, 192, 192);
-}
-
-.footer-heading:hover {
-  color:  rgb(255, 255, 255);
-  box-shadow: 0 0 10px  rgb(255, 255, 255);;
+.footer-link:hover > .footer-img {
+  animation: sectionImgAnimation 2s linear infinite;
 }
 
 .footer-logo {
   width: 200px;
+  transition: all .3s linear;
 }
 
 .footer-logo:hover {
-  scale: 1.05;
+  scale: 1.1;
 }
 /* footer finish */
